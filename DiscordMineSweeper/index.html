@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discord MineSweeper</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <h1 style="text-align: center;">Discordで遊べるマインスイーパー</h1>
+
+    <div class="user">
+        <div class="in">
+            <div class="numberInput">
+                <p class="inputDescription">マス数</p>
+                <label for="width">横 :</label>
+                <input type="number" id="width" class="numIn" min="3" max="33" value="9"><br>
+                <label for="height">縦 :</label>
+                <input type="number" id="height" class="numIn" min="3" max="33" value="9"><br>
+            </div>
+            <div class="bombInput">
+                <p class="inputDescription">爆弾数</p>
+                <input type="number" id="bomb" class="numInB" min="1" max="99" value="12"><br>
+            </div>
+            <div class="emojiInput">
+                <p class="inputDescription">爆弾の絵文字名</p>
+                :<input type="text" id="emoji" class="emojiIn" value="bomb" size="16" style="text-align: center;">:
+            </div>
+        </div>
+        <div class="button">
+            <button class="generateButton" onclick="generate()">Generate</button>
+        </div>
+    </div>
+
+    <div class="out">
+        <output>
+            <textarea class="outText" id="outText" wrap="off"></textarea>
+        </output>
+        <button onclick="clipboardCopy()">Copy</button>&emsp;<span id="total"></span>
+    </div>
+    <div style="display: flex; justify-content: flex-end; align-items: flex-end;">
+        <a href="https://youtu.be/dQw4w9WgXcQ"><img src="./img/rick_astley.jpg" width="48px" height="48px"></a>
+    </div>
+
+    <script src="./src/script.js"></script>
+</body>
+</html>
